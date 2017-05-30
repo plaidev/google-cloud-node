@@ -817,6 +817,7 @@ BigQuery.prototype.query = function(options, callback) {
   delete requestQuery.job;
 
   if (job) {
+    delete requestQuery.query
     // Get results of the query.
     self.request({
       uri: '/queries/' + job.id,
